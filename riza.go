@@ -27,7 +27,7 @@ type Config struct {
 	RequestContext context.Context
 }
 
-func signin(w http.ResponseWriter, r *http.Request) {
+func Signin(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	var ctx context.Context
 	ctx = context.WithValue(r.Context(), "credentials", &credentials{})
